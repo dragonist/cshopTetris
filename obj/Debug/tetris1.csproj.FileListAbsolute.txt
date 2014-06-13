@@ -1,0 +1,18 @@
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\erinlee\Documents\Visual Studio 2013\Projects\WindowsFormsApplication7\WindowsFormsApplication7\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\bin\Debug\WindowsFormsApplication7.pdb
