@@ -46,16 +46,17 @@ namespace WindowsFormsApplication7
     }
     class Mainfunction
     {
+        
         public int[,] mainB = new int[4, 4];
         public int i, j;
         board temp = new board();
 
         public Mainfunction()
         {
-            i = 3; j = 0;
+            i = 0; j = 3;
             Random random = new Random();
             int k = random.Next(1, 7);
-            k = 1;
+            
             switch (k)
             {
                 case 1:
@@ -80,19 +81,16 @@ namespace WindowsFormsApplication7
                     break;
             }
         }
-        public void put(ref int[,] map, int time, int move)
+        public void put(ref int[,] map)
         {
             for (int a = 0; a < 4; a++)
             {
                 for (int b = 0; b < 4; b++)
                 {
-                    if (map[time - 4 + a, move + b] == 0)
-                    {
-                        map[time - 4 + a, move + b] = map[time - 4 + a, move + b] + mainB[a, b];
-                    }
+                    if (i + a< 0 || i + a > 15 || j + b < 0 || j + b > 10) { continue; }
+                    map[i + a, j + b] += mainB[a, b];
                 }
             }
-
         }
         public void move(int k)
         {
@@ -112,13 +110,13 @@ namespace WindowsFormsApplication7
             switch(k)
             {
                 case 0:
-                    i--;
+                    j--;
                     break;
                 case 1:
-                    i++;
+                    j++;
                     break;
                 case 2:
-                    j++;
+                    i++;
                     break;
                 default:
                     break;

@@ -13,9 +13,7 @@ namespace WindowsFormsApplication7
     public partial class Form1 : Form
     {
         private Mainfunction block = new Mainfunction();
-        int time = 0;
-        int move = 0;
-        int bottom = 0;
+       
         private int[,] map = new int[17,10]
         {
             {0,0,0,0,0,0,0,0,0,0},
@@ -53,7 +51,6 @@ namespace WindowsFormsApplication7
         {
             InitializeComponent();
             timer1.Start();
-            
         }
 
         private void Form1_Paint_1(object sender, PaintEventArgs e)
@@ -76,39 +73,17 @@ namespace WindowsFormsApplication7
                     {
                         if (block.mainB[a, b] == 0) { continue; }
                         e.Graphics.DrawImage(tiles[block.mainB[a, b]],
-                            new Rectangle((block.i + b) * 12 + 20,(block.j+time-4 + a) * 12 + 20, 12, 12));
+                            new Rectangle((block.j + b) * 12 + 20,(block.i+a) * 12 + 20, 12, 12));
                     }
                 }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (block.mainB[0, 0] == -1)
-            { block = new Mainfunction(); }
-            int check = block.check(map, time, move, bottom);
-
-            if (check == 2)
-            {
-                
-                block.put(ref map, time, move);
-                block = new Mainfunction();
-                block.mainB[0, 0] = -1;
-                time = 0;
-                bottom = 0;
-
-            }
-            else if (check == 1)
-            {
-                bottom++;
-                time++;
-            }
-            else
-            {
-                bottom = 0;
-                time++;
-            }
-
+            block.i += 1;
+            blockCheck1();
             Invalidate();
+            
         }
 
 
@@ -121,18 +96,44 @@ namespace WindowsFormsApplication7
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             int k=4;
-            if (e.KeyCode == Keys.Left) {  k = 0; }
-            if (e.KeyCode == Keys.Right) { k = 1; }
-            if (e.KeyCode == Keys.Down) { time++; }
+            if (e.KeyCode == Keys.Left&& block.j!=0) {  k = 0; }
+            if (e.KeyCode == Keys.Right&&block.j!=10) { k = 1; }
+            if (e.KeyCode == Keys.Down) { k = 2; }
             if (e.KeyCode == Keys.Up) { k = 3; }
             block.move(k);
            
             e.Handled = true;
+            
+            blockCheck1();
             Invalidate();
         }
- 
-        
-      
+        private void blockCheck1()
+        {
+            int[] checkfour={3,3,3,3};
+            for (int num = 0; num <4; num++)
+            {
+                int k=3;
+                do
+                {
+                    if (k<0) { break; }
+                    if (block.mainB[k,num] == 0)
+                    {
+                        k--;
+                        checkfour[num] = k;
+                    }
+                    else { break; }
+                } while (true);
+            }
+            for (int num = 0; num < 4; num++)
+            {
+                if (checkfour[num] < 0) { continue; }
+                if (map[block.i + checkfour[num], block.j + num]!= 0)
+                {
+                    block.i -= 1;
+                    block.put(ref map);
+                    block = new Mainfunction();
+                }
+            }
+        }
     }
-
 }
