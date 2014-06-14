@@ -46,7 +46,6 @@ namespace WindowsFormsApplication7
     }
     class Mainfunction
     {
-        
         public int[,] mainB = new int[4, 4];
         public int i, j;
         board temp = new board();
@@ -87,7 +86,7 @@ namespace WindowsFormsApplication7
             {
                 for (int b = 0; b < 4; b++)
                 {
-                    if (i + a< 0 || i + a > 15 || j + b < 0 || j + b > 10) { continue; }
+                    if (i + a< 2 || i + a > 18 || j + b < 0 || j + b > 10) { continue; }
                     map[i + a, j + b] += mainB[a, b];
                 }
             }
@@ -120,6 +119,36 @@ namespace WindowsFormsApplication7
                     break;
                 default:
                     break;
+            }
+        }
+        public void backmove(int k)
+        {
+            if (k == 3)
+            {
+                int[,] temp = new int[4, 4];
+                for (int a = 0; a < 4; a++)
+                {
+                    for (int b = 0; b < 4; b++)
+                    {
+                        temp[a, b] = mainB[b, 3-a];
+                    }
+                }
+                mainB = temp;
+            }
+            switch (k)
+            { 
+                case 0:
+                    j++;
+                    break;
+                case 1:
+                    j--;
+                    break;
+                case 2:
+                    i--;
+                    break;
+                default:
+                    break;
+
             }
         }
         public int check(int[,] map, int time, int move, int bottom)
@@ -174,6 +203,5 @@ namespace WindowsFormsApplication7
 
             return check;
         }
-        
     }
 }

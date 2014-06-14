@@ -14,25 +14,29 @@ namespace WindowsFormsApplication7
     {
         private Mainfunction block = new Mainfunction();
        
-        private int[,] map = new int[17,10]
+        private int[,] map = new int[,]
         {
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,0,0,0,0,0,0},
-            {7,7,7,7,7,7,7,7,7,7}
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,0,0,0,0,0,0,0,0,7,7},
+            {7,7,7,7,7,7,7,7,7,7,7,7},
+            {7,7,7,7,7,7,7,7,7,7,7,7}
         };
 
         private Bitmap[] tiles = new Bitmap[]
@@ -60,7 +64,7 @@ namespace WindowsFormsApplication7
             {
                 for (int col = 0; col < map.GetLength(1); col++)
                 {
-                    e.Graphics.DrawRectangle(new Pen(Brushes.DeepSkyBlue), 20, 20, 120, 190);
+                    e.Graphics.DrawRectangle(new Pen(Brushes.DeepSkyBlue), 44, 56, 96, 192);
 
                     e.Graphics.DrawImage(tiles[map[row, col]],
                         new Rectangle(col * 12 + 20, row * 12 + 20, 12, 12));
@@ -77,35 +81,35 @@ namespace WindowsFormsApplication7
                     }
                 }
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             block.i += 1;
             blockCheck1();
+            mapcheck3();
             Invalidate();
-            
         }
-
-
-      //  private void button1_Click(object sender, EventArgs e)
+        //  private void button1_Click(object sender, EventArgs e)
       //  {  timer1.Start();  }
 
       //  private void button2_Click(object sender, EventArgs e)
       //  { timer1.Stop();  }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             int k=4;
-            if (e.KeyCode == Keys.Left&& block.j!=0) {  k = 0; }
-            if (e.KeyCode == Keys.Right&&block.j!=10) { k = 1; }
+            if (e.KeyCode == Keys.Left) {  k = 0; }
+            if (e.KeyCode == Keys.Right) { k = 1; }
             if (e.KeyCode == Keys.Down) { k = 2; }
             if (e.KeyCode == Keys.Up) { k = 3; }
+
             block.move(k);
+            blockCheck2(k);
            
             e.Handled = true;
             
             blockCheck1();
+            mapcheck3();
             Invalidate();
+            
         }
         private void blockCheck1()
         {
@@ -131,9 +135,51 @@ namespace WindowsFormsApplication7
                 {
                     block.i -= 1;
                     block.put(ref map);
+                    
                     block = new Mainfunction();
+                    
                 }
             }
+        }
+        private void blockCheck2(int k)
+        {
+            for (int a = 0; a < 4; a++)
+            {
+                for (int b = 0; b < 4; b++)
+                {
+                    if (block.mainB[a, b] != 0&&map[block.i+a,block.j+b]!=0)
+                    {
+                        block.backmove(k);
+                    }
+                }
+            }
+        }
+        private void mapcheck3()
+        {
+            for (int row1 = 0; row1 < map.GetLength(0)-2; row1++)
+            {
+                int zerosum = row1;
+                for (int col1 = 2; col1 < map.GetLength(1)-2; col1++)
+                {
+                    if (map[row1, col1] == 0)
+                    {  
+                        zerosum=-1; 
+                        break;
+                    }
+                }
+                if (zerosum == row1)
+                {
+                    for (int row2=zerosum; row2 > 0; row2--)
+                    {
+                        for (int col2=2; col2 < map.GetLength(1)-2; col2++)
+                        {
+                            map[row2, col2] = map[row2 - 1, col2];
+                        }
+                    }
+                }
+
+            }
+            Invalidate();   
         }
     }
 }
