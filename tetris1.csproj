@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,10 +52,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="list.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +113,126 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\그림8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stage8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stagebar7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stack.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

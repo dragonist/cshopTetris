@@ -27,21 +27,21 @@ namespace WindowsFormsApplication7
             {0,0,0,0}   };
         public int[,] b4=new int[,]
         {
-            {0,0,4,0},
+            {0,0,0,0},
+            {4,4,0,0},
             {0,4,4,0},
-            {0,4,0,0},
             {0,0,0,0}   };
         public int[,] b5= new int[,]
         {
-            {0,5,5,0},
+            {0,0,0,0},
             {0,0,5,0},
-            {0,0,5,0},
+            {5,5,5,0},
             {0,0,0,0}   };
         public int[,] b6 = new int[,]
         {
-            {0,6,6,0},
-            {0,6,0,0},
-            {0,6,0,0},
+            {0,0,0,0},
+            {6,6,6,0},
+            {0,0,6,0},
             {0,0,0,0}   };
     }
     class Mainfunction
@@ -50,10 +50,9 @@ namespace WindowsFormsApplication7
         public int i, j;
         board temp = new board();
 
-        public Mainfunction()
+        public Mainfunction(Random random)
         {
-            i = 0; j = 3;
-            Random random = new Random();
+            i = 0; j = 5;
             int k = random.Next(1, 7);
             
             switch (k)
@@ -86,7 +85,7 @@ namespace WindowsFormsApplication7
             {
                 for (int b = 0; b < 4; b++)
                 {
-                    if (i + a< 2 || i + a > 18 || j + b < 0 || j + b > 10) { continue; }
+                    if (i + a< 0 || i + a > 19 || j + b < 2 || j + b > 11) { continue; }
                     map[i + a, j + b] += mainB[a, b];
                 }
             }
@@ -151,57 +150,6 @@ namespace WindowsFormsApplication7
 
             }
         }
-        public int check(int[,] map, int time, int move, int bottom)
-        {
-            int check = 0;
-
-            for (int a = 0; a < 10; a++)
-            {
-                if (map[time - bottom, a] != 0)
-                {
-                    check = 1;
-                }
-            }
-
-            if (bottom > 3)
-            {
-                check = 2;
-                return check;
-            }
-
-            if (check == 1)
-            {
-
-                for (int a = 0; a < 4; a++)
-                {
-
-
-                    //Console.WriteLine(mainB[3 - bottom,i]);
-                    for (int b = 0; b <= bottom; b++)
-                    {
-
-                        if (time > 16)
-                        {
-                            if (map[time - bottom,move +a ] != 0 && mainB[3 - bottom,a ] != 0)
-                            {
-                                check = 2;
-                                return check;
-                            }
-                        }
-                        else if (map[time - b,move +a ] != 0 && mainB[3 - b, a] != 0)
-                        {
-                            check = 2;
-                            return check;
-                        }
-                    }
-
-
-                }
-
-
-            }
-
-            return check;
-        }
+        
     }
 }

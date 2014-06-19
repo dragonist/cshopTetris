@@ -16,3 +16,58 @@ C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - �
 C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\obj\Debug\tetris1.csproj.GenerateResource.Cache
 C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\bin\Debug\WindowsFormsApplication7.exe
 C:\Users\erinlee\Desktop\프연 테트리스\test1\WindowsFormsApplication7 - 복사본 (2)\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\mong\Downloads\final1\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\mong\Downloads\final1\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\mong\Downloads\final1\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\mong\Downloads\final1\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\mong\Downloads\final1\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\mong\Downloads\final1\bin\Debug\mscorlib.dll
+C:\Users\mong\Downloads\final1\bin\Debug\ko\mscorlib.resources.dll
+C:\Users\mong\Downloads\final1\bin\Debug\normidna.nlp
+C:\Users\mong\Downloads\final1\bin\Debug\normnfc.nlp
+C:\Users\mong\Downloads\final1\bin\Debug\normnfd.nlp
+C:\Users\mong\Downloads\final1\bin\Debug\normnfkc.nlp
+C:\Users\mong\Downloads\final1\bin\Debug\normnfkd.nlp
+C:\Users\mong\Downloads\final1\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\mong\Downloads\final1\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\mong\Downloads\final1\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\mong\Downloads\final1\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\erinlee\Desktop\프연 테트리스\final3 (1)\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\mong\Downloads\final4\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\mong\Downloads\final4\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\mong\Downloads\final4\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\mong\Downloads\final4\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\mong\Downloads\final4\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\mong\Downloads\final4\bin\Debug\mscorlib.dll
+C:\Users\mong\Downloads\final4\bin\Debug\ko\mscorlib.resources.dll
+C:\Users\mong\Downloads\final4\bin\Debug\normidna.nlp
+C:\Users\mong\Downloads\final4\bin\Debug\normnfc.nlp
+C:\Users\mong\Downloads\final4\bin\Debug\normnfd.nlp
+C:\Users\mong\Downloads\final4\bin\Debug\normnfkc.nlp
+C:\Users\mong\Downloads\final4\bin\Debug\normnfkd.nlp
+C:\Users\mong\Downloads\final4\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\mong\Downloads\final4\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\mong\Downloads\final4\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\mong\Downloads\final4\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\mong\Downloads\final4\obj\Debug\WindowsFormsApplication7.Form2.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final5\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\WindowsFormsApplication7.Form2.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final5\obj\Debug\tetris1.csproj.GenerateResource.Cache
+C:\Users\erinlee\Desktop\프연 테트리스\final5\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final5\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final6\bin\Debug\WindowsFormsApplication7.exe.config
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.pdb
