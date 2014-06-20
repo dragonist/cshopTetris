@@ -71,3 +71,10 @@ C:\Users\erinlee\Desktop\프연 테트리스\final5\bin\Debug\WindowsFormsApplic
 C:\Users\erinlee\Desktop\프연 테트리스\final6\bin\Debug\WindowsFormsApplication7.exe.config
 C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.exe
 C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final6\bin\Debug\WindowsFormsApplication7.exe
+C:\Users\erinlee\Desktop\프연 테트리스\final6\bin\Debug\WindowsFormsApplication7.pdb
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\tetris1.csprojResolveAssemblyReference.cache
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.Form1.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.Form2.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\WindowsFormsApplication7.Properties.Resources.resources
+C:\Users\erinlee\Desktop\프연 테트리스\final6\obj\Debug\tetris1.csproj.GenerateResource.Cache

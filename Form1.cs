@@ -15,8 +15,41 @@ namespace WindowsFormsApplication7
     public partial class Form1 : Form
     {
 		private Random random;
-        //private SoundPlayer soundPlay1;
-        //private SoundPlayer soundbackg;
+        private SoundPlayer soundPlay1;
+        private void bitsound(int k)
+        {
+            switch (k)
+            {
+                case 0://멈춤
+                    soundPlay1 = new SoundPlayer(Properties.Resources.pause1);
+                    soundPlay1.Play();
+
+                    break;
+                case 1://멈췄다 실행
+                    soundPlay1 = new SoundPlayer(Properties.Resources.pause2);
+                    soundPlay1.Play();
+                    break;
+                /*case 2://한줄 제거
+                    soundPlay1 = new SoundPlayer(Properties.Resources.rm);
+                    soundPlay1.Play();
+                    
+                    break
+                case 3://쌓을때
+                    soundPlay1 = new SoundPlayer(Properties.Resources.stack);
+                    soundPlay1.Play();
+                    soundbackg.PlayLooping();
+                    break;
+                  */
+                case 4://stageup
+                    soundPlay1 = new SoundPlayer(Properties.Resources.stack);
+                    soundPlay1.Play();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        private SoundPlayer soundbackg;
 
         int bk = 0;
         int lastbk = 0;
@@ -106,7 +139,15 @@ namespace WindowsFormsApplication7
 			
 			label3.Text = stage.ToString();
             label4.Text = score.ToString();
+            
         }
+        private void InitializeSound()
+        {
+            soundbackg = new SoundPlayer(Properties.Resources.bgm);
+            soundbackg.PlayLooping();
+        }
+        private void EndSound()
+        { soundbackg.Stop(); }
 
         private void Form1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -121,6 +162,7 @@ namespace WindowsFormsApplication7
             {
 
                 timer1.Start();
+                
                 //soundbackg = new SoundPlayer(Properties.Resources.bgm);
 
                 e.Graphics.DrawImage(background[0], new Rectangle(0, 0, 454, 486));
@@ -128,13 +170,15 @@ namespace WindowsFormsApplication7
             else if (bk == 2)//p
             {
                 if (lastbk == bk)
-                { timer1.Start();
-                
-                  bk=1;
+                    
+                {   timer1.Start();
+                    bitsound(1);
+                    bk=1;
                 }
                 else 
                 {   
                     timer1.Stop();
+                    bitsound(0);
                     e.Graphics.DrawImage(background[2], new Rectangle(0, 0, 454, 486));
                     return;
                     
@@ -144,6 +188,10 @@ namespace WindowsFormsApplication7
             {
 				
 				timer1.Stop();
+                EndSound();
+
+                soundbackg = new SoundPlayer(Properties.Resources.end);
+                soundbackg.Play();
 				scoreboard();
 				
 				Form2 form = new Form2(list);
@@ -162,12 +210,14 @@ namespace WindowsFormsApplication7
                 if (lastbk == bk)
                 {
                     timer1.Start();
+                    soundbackg.PlayLooping();
                     bk = 1;
 					lastbk = 0;
                 }
                 else
                 {
                     timer1.Stop();
+                    soundbackg.Stop(); bitsound(4);
                     e.Graphics.DrawImage(background[0], new Rectangle(0, 0, 454, 486));
                     e.Graphics.DrawImage(stageImage[(stage+5)%7], new Rectangle(20, 20, 280, 440));
                     e.Graphics.DrawString(" stage: " + stage.ToString(),
@@ -261,16 +311,23 @@ namespace WindowsFormsApplication7
 
 			if (bk == 0)
 			{
-				if (e.KeyCode == Keys.S) { bk = 1; }
+                if (e.KeyCode == Keys.S) { bk = 1; InitializeSound(); }
 			}
             
             else
             {
+                if (e.KeyCode == Keys.N && bk == 4)
+                {
+                    lastbk = bk; 
+                    bk = 4;
+                    
+
+                }
                 
-                
-                if (e.KeyCode == Keys.N && bk == 4) { lastbk = bk; bk = 4; }
-                
-                if (e.KeyCode == Keys.P&&(bk==1||bk==2)) { lastbk = bk; bk = 2; }
+                if (e.KeyCode == Keys.P&&(bk==1||bk==2)) { 
+                    lastbk = bk; 
+                    bk = 2;
+                }
                 if (e.KeyCode == Keys.Q&&(bk==1)) { bk = 3; }
 
                 int myKey = 8;
@@ -312,6 +369,7 @@ namespace WindowsFormsApplication7
                         {
                             returnint = 1;
                             block.put(ref map);
+                            bitsound(3);
                             score += 10;
 
                             block = nextblock;
@@ -354,6 +412,7 @@ namespace WindowsFormsApplication7
                     }
 
 					score = score + 100;
+                    bitsound(2);
                     if (timer1.Interval > 30)
                     {
                         timer1.Interval = timer1.Interval - 20;
@@ -384,8 +443,12 @@ namespace WindowsFormsApplication7
         }
 		public void stageUp()
 		{
+            block = nextblock;
+            nextblock = new Mainfunction(random);
+            
 			map = new int[,]
             {
+                
                 {7,7,0,0,0,0,0,0,0,0,0,0,7,7},
                 {7,7,0,0,0,0,0,0,0,0,0,0,7,7},
                 {7,7,0,0,0,0,0,0,0,0,0,0,7,7},
@@ -472,15 +535,7 @@ namespace WindowsFormsApplication7
 			bs.Close();
 
 		}
-        public void Sound(int s)
-        {
-            if (s == 0)
-            {
- 
-            }
-            
- 
-        }
+        
     }
 	
 }

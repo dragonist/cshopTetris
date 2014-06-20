@@ -151,24 +151,6 @@
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bl1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bl5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bl6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bl2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bl3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bl4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\stage2.png" />
   </ItemGroup>
   <ItemGroup>
