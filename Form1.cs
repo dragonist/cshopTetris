@@ -26,8 +26,9 @@ namespace WindowsFormsApplication7
 
                     break;
                 case 1://멈췄다 실행
-                    soundPlay1 = new SoundPlayer(Properties.Resources.pause2);
-                    soundPlay1.Play();
+                    //soundPlay1 = new SoundPlayer(Properties.Resources.pause2);
+                    //soundPlay1.Play();
+                    soundbackg.PlayLooping();
                     break;
                 /*case 2://한줄 제거
                     soundPlay1 = new SoundPlayer(Properties.Resources.rm);
@@ -313,21 +314,20 @@ namespace WindowsFormsApplication7
 			{
                 if (e.KeyCode == Keys.S) { bk = 1; InitializeSound(); }
 			}
-            
+            else if (bk == 4)
+            {
+                if (e.KeyCode == Keys.N)
+                {
+                    bk = 1;
+                }
+            }
             else
             {
-                if (e.KeyCode == Keys.N && bk == 4)
-                {
-                    lastbk = bk; 
-                    bk = 4;
-                    
-
-                }
-                
                 if (e.KeyCode == Keys.P&&(bk==1||bk==2)) { 
                     lastbk = bk; 
                     bk = 2;
                 }
+                
                 if (e.KeyCode == Keys.Q&&(bk==1)) { bk = 3; }
 
                 int myKey = 8;
@@ -354,7 +354,7 @@ namespace WindowsFormsApplication7
 
 			Invalidate();
         }
-        private int blockCheck2(int k)
+        private int blockCheck2(int k)//블록이 가도 되는지 체크
         {
             int returnint = 0;
             for (int a = 0; a < 4; a++)
@@ -378,12 +378,9 @@ namespace WindowsFormsApplication7
                             if (map[2,7]!=0)
                             {
                                 bk = 3;
-
                             }
-
                         }
                     }
-                    
                 }
             }
             return returnint;
@@ -421,7 +418,7 @@ namespace WindowsFormsApplication7
 
             }
             Invalidate();   
-        }
+        }//한줄 없애기
         private void mapReset()
         {
 			stageUp();
@@ -440,7 +437,7 @@ namespace WindowsFormsApplication7
             label3.Text = stage.ToString();
             label4.Text = score.ToString();
             
-        }
+        }//끝날때 맵 리셋
 		public void stageUp()
 		{
             block = nextblock;
@@ -472,7 +469,7 @@ namespace WindowsFormsApplication7
                 {7,7,7,7,7,7,7,7,7,7,7,7,7,7},
                 {7,7,7,7,7,7,7,7,7,7,7,7,7,7}
             };
-		}
+		}//스테이지 업
 		public void scoreboard()
 		{
 			string name;
@@ -534,7 +531,7 @@ namespace WindowsFormsApplication7
 
 			bs.Close();
 
-		}
+		}//점수판
         
     }
 	
